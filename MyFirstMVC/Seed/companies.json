@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Apple",
+    "Email": "apple@gmail.com",
+    "FoundationDate": "01.04.1976"
+  },
+  {
+    "Id": 2,
+    "Name": "Samsung",
+    "Email": "sumsung@gmail.com",
+    "FoundationDate": "1.03.1937"
+  },
+  {
+    "Id": 3,
+    "Name": "Nokia",
+    "Email": "nokia@gmail.com",
+    "FoundationDate": "12.05.1865"
+  }
+]

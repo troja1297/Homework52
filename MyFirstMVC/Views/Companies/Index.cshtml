@@ -1,0 +1,28 @@
+@model IEnumerable<Company>
+
+@{
+
+    ViewData["Title"] = "Companies";
+
+}
+
+<br />
+@* <a asp-action="Create">Создать</a> *@
+@using (Html.BeginForm("Index", "Companies", FormMethod.Get))
+
+
+{<br />}
+
+<table class="table table-bordered">
+
+    @foreach (Company p in Model)
+    {
+        <tr>
+            <td>@p.Name</td>
+            <td>@p.Email</td>
+            <td>@p.FoundationDay</td>
+        </tr>
+
+    }
+
+</table>
