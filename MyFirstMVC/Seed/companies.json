@@ -3,18 +3,18 @@
     "Id": 1,
     "Name": "Apple",
     "Email": "apple@gmail.com",
-    "FoundationDate": "01.04.1976"
+    "FoundationDate": "01.04.1976  12:50:00.228"
   },
   {
     "Id": 2,
     "Name": "Samsung",
     "Email": "sumsung@gmail.com",
-    "FoundationDate": "1.03.1937"
+    "FoundationDate": "01.03.1937  12:50:00.228"
   },
   {
     "Id": 3,
     "Name": "Nokia",
     "Email": "nokia@gmail.com",
-    "FoundationDate": "12.05.1865"
+    "FoundationDate": "12.05.1865  12:50:00.228"
   }
 ]

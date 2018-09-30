@@ -95,7 +95,7 @@ Write(Model.Name);
             WriteLiteral("\n        </dd>\n    </dl>\n</div>\n<div>\n    ");
             EndContext();
             BeginContext(335, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33e9f2bbeb4446e9bbc6db03a6704437", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97a0172f2a094abeaee9aa201f998a89", async() => {
                 BeginContext(381, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -130,7 +130,7 @@ Write(Model.Name);
             WriteLiteral(" |\n    ");
             EndContext();
             BeginContext(396, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e4c51354bd44dbfaf7753ca75ee7bfa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89af9e91a6b448f79e407dc8f984c46a", async() => {
                 BeginContext(446, 7, true);
                 WriteLiteral("Скачать");
                 EndContext();
@@ -165,7 +165,7 @@ Write(Model.Name);
             WriteLiteral(" |\n    ");
             EndContext();
             BeginContext(464, 41, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d81c697fe8fa45b0a06cd4cbaf4019d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53132cdb5411423b8f2d68b18d0ab071", async() => {
                 BeginContext(486, 15, true);
                 WriteLiteral("Показать список");
                 EndContext();

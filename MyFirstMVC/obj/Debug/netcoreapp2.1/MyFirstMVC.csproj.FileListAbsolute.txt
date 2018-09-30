@@ -46,3 +46,4 @@
 /home/vandreev/RiderProjects/phonesstore52/MyFirstMVC/MyFirstMVC/bin/Debug/netcoreapp2.1/MyFirstMVC.Views.pdb
 /home/vandreev/RiderProjects/phonesstore52/MyFirstMVC/MyFirstMVC/obj/Debug/netcoreapp2.1/MyFirstMVC.Views.pdb
 /home/vandreev/RiderProjects/phonesstore52/MyFirstMVC/MyFirstMVC/obj/Debug/netcoreapp2.1/MyFirstMVC.csproj.CopyComplete
+/home/vandreev/RiderProjects/phonesstore52/MyFirstMVC/MyFirstMVC/obj/Debug/netcoreapp2.1/Razor/Views/Companies/Create.g.cshtml.cs

@@ -75,6 +75,7 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Companies" t="Include">
+            <e p="Create.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Phones" t="Include">

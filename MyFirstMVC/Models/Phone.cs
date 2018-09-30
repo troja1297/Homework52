@@ -11,7 +11,7 @@ namespace MyFirstMVC.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "укажи название телефона")]
+        [Required(ErrorMessage = "Укажи название телефона")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "длина названия от 1 до 50")]
         [Remote(action: "ValidateName", controller: "Validation", ErrorMessage = "не ругайся")]
         public string Name { get; set; }
