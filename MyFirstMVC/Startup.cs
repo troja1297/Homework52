@@ -29,7 +29,7 @@ namespace MyFirstMVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(@"Data Source=.; Database=phonestore3; User Id =SA; Password =Tromb1297;"));
+                options.UseSqlServer(@"Data Source=.; Database=phonestore9; User Id =SA; Password =Tromb1297;"));
 
         }
 

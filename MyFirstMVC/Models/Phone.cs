@@ -20,14 +20,12 @@ namespace MyFirstMVC.Models
         [Range(1.0, 1600.0)]
         public double Price { get; set; }
 
-        //[Range(typeof(DateTime), "1900-01-01 00:00:00.228", "2100-01-01 00:00:00.228")]
+        //[Range(typeof(DateTime), "1900-01-01 00:00:00.228", "2020-01-01 00:00:00.228")]
         public DateTime AssemblyDate { get; set; }
 
-        public Company Company { get; set; }
-        [Required]
         public int CompanyId { get; set; }
+        public Company Company { get; set; }
 
-        [Required]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 

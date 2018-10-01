@@ -2,6 +2,7 @@
   {
     "Id": 1,
     "Name": "Iphone 4",
+    "RatingId": 5,
     "CompanyId": 1,
     "Price": 200.00,
     "AssemblyDate": "2018-08-20 12:50:00.228",
@@ -10,6 +11,7 @@
   {
     "Id": 2,
     "Name": "Xperia",
+    "RatingId": 3,
     "CompanyId": 2,
     "Price": 100.00,
     "AssemblyDate": "1999-08-20 12:50:00.000",

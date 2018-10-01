@@ -22,9 +22,9 @@ namespace MyFirstMVC.Controllers
         // GET: Phones
         public async Task<IActionResult> Index(int? companyId, string name)
         {
-            List<Company> companies = _context.Companies.ToList();
 
-            //companies.Insert(0, new Company { Id = 0, Name = "Все" });
+
+            List<Company> companies = _context.Companies.ToList();
 
             var phones = _context.Phones.Include(p => p.Category).Include(p => p.Company).ToList();
 
@@ -80,16 +80,29 @@ namespace MyFirstMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Company,Price,CategoryId")] Phone phone)
-        {
+        public async Task<IActionResult> Create([Bind("Id,Name,Company,Price,CategoryId,AssemblyDate")] Phone phone)
+        {   
+            List<Phone> companies = _context.Phones.ToList();
+
+            foreach (Phone phone1 in companies)
+            {
+                if (phone1.Name == phone.Name)
+                {
+                    ModelState.AddModelError("Name", "Такое имя уже существует");
+                }
+            }
+            
+            if (phone.AssemblyDate > DateTime.Now)
+            {
+                ModelState.AddModelError("AssemblyDate", "Телефон не может быть создан в будущем");
+            }
+            
             if (ModelState.IsValid)
             {
                 _context.Add(phone);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
-            ViewData["Companies"] = new SelectList(_context.Companies, "Id", "Name");
             return View(phone);
         }
 
@@ -106,7 +119,6 @@ namespace MyFirstMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", phone.CategoryId);
             return View(phone);
         }
 

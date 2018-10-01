@@ -16,6 +16,7 @@ namespace MyFirstMVC.Models
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<PhoneOnStock> PhonesOnStocks { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -82,6 +83,8 @@ namespace MyFirstMVC.Models
 
             modelBuilder.Entity<Stock>()
                 .HasData(JsonConvert.DeserializeObject<Stock[]>(File.ReadAllText("Seed/stocks.json")));
+            modelBuilder.Entity<Rating>()
+                .HasData(JsonConvert.DeserializeObject<Rating[]>(File.ReadAllText("Seed/ratings.json")));
 
             modelBuilder.Entity<Phone>()
                 .HasOne(p => p.Company)
@@ -93,6 +96,7 @@ namespace MyFirstMVC.Models
                .WithOne(c => c.Company)
                .HasPrincipalKey(c => c.Id)
                .OnDelete(DeleteBehavior.Restrict);
+            
         }
     }
 }

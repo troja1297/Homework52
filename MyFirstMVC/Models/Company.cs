@@ -19,8 +19,7 @@ namespace MyFirstMVC.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
-        public DateTime FoundationDay { get; set; }
+        public DateTime FoundationDate { get; set; }
 
         public IEnumerable<Phone> Phones { get; set; }
     }

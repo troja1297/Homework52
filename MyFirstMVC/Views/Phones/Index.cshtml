@@ -47,13 +47,16 @@
         <tr>
 
             <td>@p.Name</td>
-
-            <td>
-
-                <a asp-area="" asp-controller="Phones" asp-action="Edit" asp-route-id="@p"a></a>
-            </td>
             <td>@p.Price</td>
-
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@p.Id"a>Edit</a>
+            </td>
+            
+            <td>
+                <a asp-action="Details" asp-route-id="@p.Id"a>Details</a>
+            </td>
+            
         </tr>
 
     }

@@ -49,18 +49,20 @@ namespace MyFirstMVC.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<DateTime>("FoundationDay");
+                    b.Property<DateTime>("FoundationDate");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.ToTable("Companies");
 
                     b.HasData(
-                        new { Id = 1, Email = "apple@gmail.com", FoundationDay = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Name = "Apple" },
-                        new { Id = 2, Email = "sumsung@gmail.com", FoundationDay = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Name = "Samsung" },
-                        new { Id = 3, Email = "nokia@gmail.com", FoundationDay = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), Name = "Nokia" }
+                        new { Id = 1, Email = "apple@gmail.com", FoundationDate = new DateTime(1976, 1, 4, 12, 50, 0, 228, DateTimeKind.Unspecified), Name = "Apple" },
+                        new { Id = 2, Email = "sumsung@gmail.com", FoundationDate = new DateTime(1937, 1, 3, 12, 50, 0, 228, DateTimeKind.Unspecified), Name = "Samsung" },
+                        new { Id = 3, Email = "nokia@gmail.com", FoundationDate = new DateTime(1865, 12, 5, 12, 50, 0, 228, DateTimeKind.Unspecified), Name = "Nokia" }
                     );
                 });
 
@@ -103,17 +105,21 @@ namespace MyFirstMVC.Migrations
 
                     b.Property<double>("Price");
 
+                    b.Property<int>("RatingId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
                     b.HasIndex("CompanyId");
 
+                    b.HasIndex("RatingId");
+
                     b.ToTable("Phones");
 
                     b.HasData(
-                        new { Id = 1, AssemblyDate = new DateTime(2018, 8, 20, 12, 50, 0, 228, DateTimeKind.Unspecified), CategoryId = 1, CompanyId = 1, Name = "Iphone 4", Price = 200.0 },
-                        new { Id = 2, AssemblyDate = new DateTime(1999, 8, 20, 12, 50, 0, 0, DateTimeKind.Unspecified), CategoryId = 2, CompanyId = 2, Name = "Xperia", Price = 100.0 }
+                        new { Id = 1, AssemblyDate = new DateTime(2018, 8, 20, 12, 50, 0, 228, DateTimeKind.Unspecified), CategoryId = 1, CompanyId = 1, Name = "Iphone 4", Price = 200.0, RatingId = 5 },
+                        new { Id = 2, AssemblyDate = new DateTime(1999, 8, 20, 12, 50, 0, 0, DateTimeKind.Unspecified), CategoryId = 2, CompanyId = 2, Name = "Xperia", Price = 100.0, RatingId = 3 }
                     );
                 });
 
@@ -130,6 +136,27 @@ namespace MyFirstMVC.Migrations
                     b.HasIndex("StockId");
 
                     b.ToTable("PhonesOnStocks");
+                });
+
+            modelBuilder.Entity("MyFirstMVC.Models.Rating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Value");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ratings");
+
+                    b.HasData(
+                        new { Id = 1, Value = 1 },
+                        new { Id = 2, Value = 2 },
+                        new { Id = 3, Value = 3 },
+                        new { Id = 4, Value = 4 },
+                        new { Id = 5, Value = 5 }
+                    );
                 });
 
             modelBuilder.Entity("MyFirstMVC.Models.Stock", b =>
@@ -178,6 +205,11 @@ namespace MyFirstMVC.Migrations
                         .WithMany("Phones")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("MyFirstMVC.Models.Rating", "Rating")
+                        .WithMany()
+                        .HasForeignKey("RatingId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("MyFirstMVC.Models.PhoneOnStock", b =>

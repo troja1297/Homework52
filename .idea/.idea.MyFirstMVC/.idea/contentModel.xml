@@ -9,6 +9,7 @@
       <e p="MyFirstMVC" t="IncludeRecursive">
         <e p="Controllers" t="Include">
           <e p="CategoriesController.cs" t="Include" />
+          <e p="CommentController.cs" t="Include" />
           <e p="CompanyController.cs" t="Include" />
           <e p="PhonesController.cs" t="Include" />
           <e p="StockController.cs" t="Include" />
@@ -16,42 +17,33 @@
         </e>
         <e p="Files" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20180910143957_initial.Designer.cs" t="Include" />
-          <e p="20180910143957_initial.cs" t="Include" />
-          <e p="20180912135113_CreateCategoryEntity.Designer.cs" t="Include" />
-          <e p="20180912135113_CreateCategoryEntity.cs" t="Include" />
-          <e p="20180912141117_AddCategorySubCategoryRelation.Designer.cs" t="Include" />
-          <e p="20180912141117_AddCategorySubCategoryRelation.cs" t="Include" />
-          <e p="20180912142648_AddManyToManyLinkToProductAndStock.Designer.cs" t="Include" />
-          <e p="20180912142648_AddManyToManyLinkToProductAndStock.cs" t="Include" />
-          <e p="20180917142103_SeedStocks.Designer.cs" t="Include" />
-          <e p="20180917142103_SeedStocks.cs" t="Include" />
-          <e p="20180917142229_AddStock3.Designer.cs" t="Include" />
-          <e p="20180917142229_AddStock3.cs" t="Include" />
-          <e p="20180924134819_AddCompanies.Designer.cs" t="Include" />
-          <e p="20180924134819_AddCompanies.cs" t="Include" />
-          <e p="20180927133242_CreateDateTimeFieldInPhones.Designer.cs" t="Include" />
-          <e p="20180927133242_CreateDateTimeFieldInPhones.cs" t="Include" />
-          <e p="20180927133909_UpdatePhonesSeed.Designer.cs" t="Include" />
-          <e p="20180927133909_UpdatePhonesSeed.cs" t="Include" />
-          <e p="20180927134334_UpdatePhone1.Designer.cs" t="Include" />
-          <e p="20180927134334_UpdatePhone1.cs" t="Include" />
-          <e p="20180930122344_AddFoundationdDateAndEmailInCompanyModel.Designer.cs" t="Include" />
-          <e p="20180930122344_AddFoundationdDateAndEmailInCompanyModel.cs" t="Include" />
+          <e p="20180930200253_Initial.Designer.cs" t="Include" />
+          <e p="20180930200253_Initial.cs" t="Include" />
+          <e p="20181001095548_AddRating.Designer.cs" t="Include" />
+          <e p="20181001095548_AddRating.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Category.cs" t="Include" />
+          <e p="Comments.cs" t="Include" />
           <e p="Company.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Order.cs" t="Include" />
           <e p="Phone.cs" t="Include" />
           <e p="PhoneOnStock.cs" t="Include" />
+          <e p="Rating.cs" t="Include" />
           <e p="Stock.cs" t="Include" />
         </e>
         <e p="MyFirstMVC.csproj" t="IncludeRecursive" />
-        <e p="Pages" t="Include" />
+        <e p="Pages" t="Include">
+          <e p="Comment" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Modalwindow" t="Include">
+            <e p="ModalWindow.cshtml" t="Include" />
+          </e>
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -60,6 +52,7 @@
           <e p="categories.json" t="Include" />
           <e p="companies.json" t="Include" />
           <e p="phones.json" t="Include" />
+          <e p="ratings.json" t="Include" />
           <e p="stocks.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
@@ -74,8 +67,12 @@
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
+          <e p="Comments" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Companies" t="Include">
             <e p="Create.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Phones" t="Include">

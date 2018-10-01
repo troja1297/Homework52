@@ -20,7 +20,8 @@
         <tr>
             <td>@p.Name</td>
             <td>@p.Email</td>
-            <td>@p.FoundationDay</td>
+            <td>@p.FoundationDate</td>
+            <td><a asp-action="Edit" asp-route-id="@p.Id">Edit</a></td>
         </tr>
 
     }
